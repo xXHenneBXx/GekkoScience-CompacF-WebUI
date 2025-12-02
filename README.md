@@ -33,8 +33,6 @@ CGMiner running on your miner host
 Your miners visible at http://<miner-ip>:4028
 
 # 🟦 Windows Setup
-1. Backend
-cd 
 npm install
 npm run dev:all
 
@@ -42,8 +40,6 @@ Open the dashboard:
 [http://localhost:5173/]
 
 # 🐧 Linux Setup (Ubuntu / Debian / Armbian)
-1. Backend
-cd backend
 npm install
 npm run dev:all
 
@@ -57,13 +53,12 @@ This runs backend + frontend together behind a single container.
 Build & Run
 docker compose up --build
 
-
 Then open:
 [http://localhost:5173/]
 
 # 💡 Configuration
-
-
+change to Your CG Miners Host IP in ".env" as well as "backend/server.ts"
+Then Run Server !! All Set
 
 # 💻 Development Notes
 
