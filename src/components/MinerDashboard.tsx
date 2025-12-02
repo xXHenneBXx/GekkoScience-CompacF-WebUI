@@ -88,8 +88,8 @@ export function MinerDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-blue-500">CGMiner Dashboard</h1>
-              <p className="text-sm text-cyan-400 mt-1">Created By: xXHenneBXx</p>
+              <h1 className="text-2xl font-bold text-blue-700">CGMiner Dashboard</h1>
+              <p className="text-sm text-orange-400 mt-1">Created By: xXHenneBXx</p>
             </div>
             <div className="flex items-center gap-2 text-sm">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -106,7 +106,7 @@ export function MinerDashboard() {
             title="Hashrate (5s)"
             value={((summary?.mhs5s || 0) / 1000).toFixed(2)}
             unit="GH/s"
-            icon={<Activity className="w-6 h-6" />}
+            icon={<Activity className="w-6 text-green-500 h-6" />}
             subtitle={`Avg: ${((summary?.mhsAv || 0) / 1000).toFixed(2)} GH/s`}
           />
           <StatCard
@@ -119,7 +119,7 @@ export function MinerDashboard() {
           <StatCard
             title="Hardware Errors"
             value={summary?.hardwareErrors || 0}
-            icon={<AlertTriangle className="w-6 h-6" />}
+            icon={<AlertTriangle className="w-6 text-red-500 h-6" />}
             subtitle={`${summary?.rejected || 0} rejected shares`}
             trend={summary && summary.hardwareErrors > 0 ? 'down' : 'neutral'}
           />
@@ -127,19 +127,19 @@ export function MinerDashboard() {
             title="Utility"
             value={summary?.utility || 0}
             unit="shares/min"
-            icon={<Zap className="w-6 h-6" />}
+            icon={<Zap className="w-6 text-yellow-400 h-6" />}
           />
           <StatCard
             title="Temperature"
             value={devices[0]?.temperature || 0}
             unit="°C"
-            icon={<Thermometer className="w-6 h-6" />}
+            icon={<Thermometer className="w-6 text-orange-500 h-6" />}
             trend={devices[0]?.temperature > 75 ? 'down' : 'neutral'}
           />
           <StatCard
             title="Uptime"
             value={summary ? formatUptime(summary.elapsed) : '0s'}
-            icon={<Clock className="w-6 h-6" />}
+            icon={<Clock className="w-6 text-cyan-400 h-6" />}
           />
         </div>
 
