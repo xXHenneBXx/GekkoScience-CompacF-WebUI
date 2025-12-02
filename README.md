@@ -32,7 +32,7 @@ Your miners visible at http://<miner-ip>:4028
 
 
 # 💡 Configuration
-change to Your CG Miners Host IP in ".env" as well as "backend/server.ts"
+change Your CG Miners Host IP in ".env" as well as "backend/server.ts"
 Then Run Server !! All Set
 
 
