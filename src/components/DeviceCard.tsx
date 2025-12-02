@@ -1,4 +1,4 @@
-import { Cpu, Thermometer, Activity, AlertCircle } from 'lucide-react';
+import { Cpu, Thermometer, Zap, Activity, AlertCircle } from 'lucide-react';
 import { DeviceInfo } from '../types/miner';
 
 interface DeviceCardProps {
@@ -33,6 +33,7 @@ export function DeviceCard({ device }: DeviceCardProps) {
         </div>
         <div className="text-right">
           <div className={`text-2xl font-bold ${getTempColor(device.temperature)}`}>
+		    <Thermometer className="w-4 h-4 text-orange-500" />
             {device.temperature.toFixed(1)}°C
           </div>
           <div className="text-xs text-gray-500 mt-1">Temperature</div>
@@ -42,7 +43,7 @@ export function DeviceCard({ device }: DeviceCardProps) {
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div className="bg-gray-50 rounded-lg p-3">
           <div className="flex items-center gap-2 mb-1">
-            <Activity className="w-4 h-4 text-blue-600" />
+            <Activity className="w-4 h-4 text-green-600" />
             <span className="text-xs text-gray-600">Hashrate</span>
           </div>
           <div className="text-lg font-bold text-gray-900">{device.hashrate.toFixed(2)}</div>
@@ -51,10 +52,10 @@ export function DeviceCard({ device }: DeviceCardProps) {
 
         <div className="bg-gray-50 rounded-lg p-3">
           <div className="flex items-center gap-2 mb-1">
-            <Thermometer className="w-4 h-4 text-orange-600" />
+            <Zap className="w-4 h-4 text-red-600" />
             <span className="text-xs text-gray-600">Frequency</span>
           </div>
-          <div className="text-lg font-bold text-gray-900">{device.frequency}</div>
+          <div className="text-lg font-bold text-gray-900">{device.Frequency}</div>
           <div className="text-xs text-gray-500">MHz</div>
         </div>
       </div>
