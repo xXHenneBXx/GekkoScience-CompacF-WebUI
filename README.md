@@ -70,3 +70,5 @@ Frontend + Backend loads automatically with npm run dev:all
 Vite dev server supports hot-module-reload
 
 Help made By Bolt.new AI and ChatGPT
+
+SAFARI DOES NOT WORK !! USE CHROME OR EDGE
