@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import { createCGMinerConnection, sendCGMinerCommand } from './cgminer.js';
+import { createCGMinerConnection, sendCGMinerCommand } from './cgminer.ts';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const CGMINER_HOST = process.env.CGMINER_HOST || 'HOST_IP';
+const CGMINER_HOST = process.env.CGMINER_HOST || '192.168.0.85';
 const CGMINER_PORT = parseInt(process.env.CGMINER_PORT || '4028');
 
 app.use(cors());
@@ -28,6 +28,7 @@ app.get('/api/stats', async (req: Request, res: Response) => {
         mhs1m: summary['MHS 1m'] || 0,
         mhs5m: summary['MHS 5m'] || 0,
         mhs15m: summary['MHS 15m'] || 0,
+		frequency: summary['Frequency'] || 0,
         foundBlocks: summary['Found Blocks'] || 0,
         getworks: summary['Getworks'] || 0,
         accepted: summary['Accepted'] || 0,
@@ -60,6 +61,7 @@ app.get('/api/stats', async (req: Request, res: Response) => {
 app.get('/api/devices', async (req: Request, res: Response) => {
   try {
     const data = await sendCGMinerCommand(CGMINER_HOST, CGMINER_PORT, 'devs');
+	const fallbackFreq = await getFrequencyFromStats();
     if (data?.DEVS) {
       const devices = data.DEVS.map((dev: any) => ({
         id: dev['ID'] || 0,
@@ -72,7 +74,7 @@ app.get('/api/devices', async (req: Request, res: Response) => {
         accepted: dev['Accepted'] || 0,
         rejected: dev['Rejected'] || 0,
         hardwareErrors: dev['Hardware Errors'] || 0,
-        frequency: dev['Frequency'] || 0,
+        frequency: dev['Frequency'] || fallbackFreq || 0,
         utility: dev['Utility'] || 0,
         elapsed: dev['Elapsed'] || 0,
       }));
@@ -86,6 +88,22 @@ app.get('/api/devices', async (req: Request, res: Response) => {
   }
 });
 
+async function getFrequencyFromStats() {
+  try {
+    const statsData = await sendCGMinerCommand(CGMINER_HOST, CGMINER_PORT, 'stats');
+    const first = statsData?.STATS?.[0];
+
+    return Number(
+      first?.Frequency ??
+      first?.Freq ??
+      first?.FreqSel ??
+      0
+    );
+  } catch {
+    return 0;
+  }
+}
+
 // Pools
 app.get('/api/pools', async (req: Request, res: Response) => {
   try {
@@ -98,6 +116,7 @@ app.get('/api/pools', async (req: Request, res: Response) => {
         user: pool['User'] || '',
         accepted: pool['Accepted'] || 0,
         rejected: pool['Rejected'] || 0,
+		frequency: pool['Frequency'] || 0,
         stale: pool['Stale'] || 0,
         lastShareTime: pool['Last Share Time'] || 0,
       }));
