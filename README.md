@@ -53,6 +53,7 @@ Open:
 [http://localhost:5173/]
 
 # 🐋 Docker Deployment
+** coming soon **
 
 This runs backend + frontend together behind a single container.
 
