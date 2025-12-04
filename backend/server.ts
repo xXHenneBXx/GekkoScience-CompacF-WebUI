@@ -3,9 +3,9 @@ import cors from 'cors';
 import { createCGMinerConnection, sendCGMinerCommand } from './cgminer.ts';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-const CGMINER_HOST = process.env.CGMINER_HOST || 'YOUR_CGMINER HOST_IP'; // 'localhost' if runnning on host machine, Use Host IP of cgminer instead
-const CGMINER_PORT = parseInt(process.env.CGMINER_PORT || '4028');
+const PORT = process.env.PORT || 3001; // TCP-HTTP Proxy Port
+const CGMINER_HOST = process.env.CGMINER_HOST || '192.168.0.85'; ; // 'localhost' if runnning on host machine, Use Host IP of CGMiner instead
+const CGMINER_PORT = parseInt(process.env.CGMINER_PORT || '4028'); // Default CGMiner Port 
 
 app.use(cors());
 app.use(express.json());
@@ -47,6 +47,7 @@ app.get('/api/stats', async (req: Request, res: Response) => {
         difficultyRejected: summary['Difficulty Rejected'] || 0,
         difficultyStale: summary['Difficulty Stale'] || 0,
         bestShare: summary['Best Share'] || 0,
+		serial: summary['Serial'] || 'Uknown',
       });
     } else {
       res.status(500).json({ error: 'Invalid response from CGMiner' });
@@ -66,6 +67,7 @@ app.get('/api/devices', async (req: Request, res: Response) => {
       const devices = data.DEVS.map((dev: any) => ({
         id: dev['ID'] || 0,
         name: dev['Name'] || 'Unknown',
+		serial: dev['Serial'] || 'Uknown',
         status: dev['Status'] || 'Unknown',
         temperature: dev['Temperature'] || 0,
         hashrate: dev['MHS 5s'] || 0,
@@ -77,6 +79,8 @@ app.get('/api/devices', async (req: Request, res: Response) => {
         frequency: dev['Frequency'] || fallbackFreq || 0,
         utility: dev['Utility'] || 0,
         elapsed: dev['Elapsed'] || 0,
+		chips: dev['Chips'] || 1,
+		fanSpeed: dev['Fan Speed'] || 0,
       }));
       res.json(devices);
     } else {
@@ -293,8 +297,8 @@ app.post('/api/config/set', async (req: Request, res: Response) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`CGMiner proxy server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`CGMiner proxy server running on http://0.0.0.0:${PORT}`);
   console.log(`Connecting to CGMiner at ${CGMINER_HOST}:${CGMINER_PORT}`);
   console.log('Available endpoints:');
   console.log('  GET  /api/health');
