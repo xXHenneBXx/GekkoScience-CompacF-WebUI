@@ -12,7 +12,7 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-blue-50">
+    <div className="flex-1 min-h-screen md:px-8 bg-gray-900">
       <Sidebar
         currentPage={currentPage}
         onNavigate={onNavigate}
@@ -20,7 +20,7 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
         onToggle={() => setSidebarOpen(!sidebarOpen)}
       />
 
-      <div className="flex-1 ml-50 md:ml-34 transition-all duration-300">
+      <div className="flex-1 md:ml-50 md:ml-34 transition-all duration-300">
         {/* toggle button */}
         {!sidebarOpen && (
           <button
@@ -32,7 +32,7 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
         )}
 
         <header className="bg-gray border-r border-gray-200 sticky top-0 z-10">
-          <div className="px-8 py-4">
+          <div className="md:px-8 py-4">
             <h1 className="text-2xl font-bold text-blue-600">
               {currentPage === "home" && "Monitor"}
               {currentPage === "settings" && "Pool Settings"}
@@ -46,7 +46,7 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
           </div>
         </header>
 
-        <main className="p-8">{children}</main>
+        <main className="md:p-8">{children}</main>
       </div>
     </div>
   );

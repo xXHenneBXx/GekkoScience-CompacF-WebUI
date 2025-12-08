@@ -31,6 +31,7 @@ export function Sidebar({ currentPage, onNavigate, open, onToggle }: SidebarProp
           <div>
             <h2 className="font-bold text-blue-600">CGMiner</h2>
             <p className="text-xs text-green-500">Web Mining UI</p>
+		    <h3 className="text-xs text-gray-500">Version 1.0</h3>
           </div>
         </div>
       </div>
