@@ -80,7 +80,7 @@ working on a fix/workaround
 
 DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI 
 
-## Support This Project
+## Buy Me A Coffee & Support This Project
     
 **Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s`
 <details>
