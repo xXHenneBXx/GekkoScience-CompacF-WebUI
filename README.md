@@ -82,20 +82,31 @@ DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI
 
 ## Support This Project
 
-**Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s`
+**Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s` 
+<img width="720" height="635" alt="BTC" src="https://github.com/user-attachments/assets/8d27d7b6-d7fe-42f2-a3e4-18fd106d613a" />
 
 **Stellar(XLM):** `GCP7GQQLXAOJMDP6ZCVFTZWNW5NGKWE2FZTBJHJ2HRJL4P7G4KIAHOVA` Memo: `293595506`
+<img width="720" height="757" alt="xlm" src="https://github.com/user-attachments/assets/62e950f4-35b4-4a5c-a76d-8f7639473065" />
 
 **Shiba Inu(SHIB) ERC-20:** `0x671902A98F6dE872a79621de5e3c1Ae69543769B`
+<img width="720" height="637" alt="shib" src="https://github.com/user-attachments/assets/8ed6acb0-e5b3-456e-b535-601b63a02f90" />
 
 **XRP:** `roV3VenzynmXXDZypxHdB56bEE8aXsfMP` Tag: `2666387270`
+<img width="720" height="641" alt="xrp" src="https://github.com/user-attachments/assets/47965308-bbd7-4c6d-a26d-fc437c680c68" />
 
 **Dogecoin(DOGE):** `DEgaavUry7V5uV25xh8yWEc9wd44RjdohZ`
+<img width="720" height="653" alt="doge" src="https://github.com/user-attachments/assets/2c5e6dcc-f75b-4026-9200-5091b61f1e41" />
 
 **Binance(BNB):** `0x3105c2C7D88aA15f13e7AE57d1E28b7416ba638e`
+<img width="720" height="647" alt="bnb" src="https://github.com/user-attachments/assets/0267cfd5-0953-420a-b249-5f99c8f3c907" />
 
 **BitcoinCash(BCH):** `bitcoincash:qzuheqchqcsp753gqyadhqm97afprvsnugskp30795`
+<img width="720" height="621" alt="bch" src="https://github.com/user-attachments/assets/3c0e9d41-8104-42fd-ab5e-fd3707710c2b" />
 
 **Solana(SOL):** `6xk4BsWqFbrD3XJb1bCyFQdKHGdQB71PFn4A8qchCNT`
+<img width="720" height="647" alt="sol" src="https://github.com/user-attachments/assets/46fdab13-0f54-4f77-9cc2-0e3f4f1b870b" />
 
 **SushiSwap(SUSHI) ERC-20:** `0x671902A98F6dE872a79621de5e3c1Ae69543769B`
+<img width="720" height="625" alt="sushi" src="https://github.com/user-attachments/assets/28d5f9d8-5f30-491d-9773-65e89a5ad8d0" />
+
+
