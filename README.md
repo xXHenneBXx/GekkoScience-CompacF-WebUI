@@ -71,6 +71,10 @@ Frontend + Backend loads automatically with npm run dev:all
 
 Vite dev server supports hot-module-reload
 
-Help made By Bolt.new AI and ChatGPT
+Help debug/make By Bolt.new(Sonnet4.5) and ChatGPT(GPT-5) AI
 
-SAFARI DOES NOT WORK !! USE CHROME OR EDGE
+***ALERT*** 
+CGMINER AND USING USB DEVICE(S) BUG- Clicking "Restart" will cause CG Miner to crash and not properly restart, therefore will have to manually restrat CG Miner
+working on a fix/workaround
+
+DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI 
