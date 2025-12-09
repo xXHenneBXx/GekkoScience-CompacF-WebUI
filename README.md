@@ -81,11 +81,12 @@ working on a fix/workaround
 DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI 
 
 ## Support This Project
-<details>
-  <summary>Click to show QR code</
     
-**Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s` 
+**Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s`
+<details>
+  <summary>Click to show QR code</summary>
 <img width="720" height="635" alt="BTC" src="https://github.com/user-attachments/assets/8d27d7b6-d7fe-42f2-a3e4-18fd106d613a" />
+</details>
 
 **Stellar(XLM):** `GCP7GQQLXAOJMDP6ZCVFTZWNW5NGKWE2FZTBJHJ2HRJL4P7G4KIAHOVA` Memo: `293595506`
 <img width="720" height="757" alt="xlm" src="https://github.com/user-attachments/assets/62e950f4-35b4-4a5c-a76d-8f7639473065" />
