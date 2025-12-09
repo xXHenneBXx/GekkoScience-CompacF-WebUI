@@ -73,7 +73,8 @@ Vite dev server supports hot-module-reload
 
 Help debug/make By Bolt.new(Sonnet4.5) and ChatGPT(GPT-5) AI
 
-***ALERT*** 
+***ALERT***
+
 CGMINER AND USING USB DEVICE(S) BUG- Clicking "Restart" will cause CG Miner to crash and not properly restart, therefore will have to manually restrat CG Miner
 working on a fix/workaround
 
