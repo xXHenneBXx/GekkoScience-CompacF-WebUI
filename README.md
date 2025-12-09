@@ -81,7 +81,9 @@ working on a fix/workaround
 DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI 
 
 ## Support This Project
-
+<details>
+  <summary>Click to show QR code</
+    
 **Bitcoin(BTC):** `bc1qn9fwsaqfxnj622rvnf83hjy3lmfmtux9mk5e9s` 
 <img width="720" height="635" alt="BTC" src="https://github.com/user-attachments/assets/8d27d7b6-d7fe-42f2-a3e4-18fd106d613a" />
 
@@ -110,3 +112,4 @@ DOES NOT WORK ON FIREFOX !! USE CHROME, EDGE OR SAFARI
 <img width="720" height="625" alt="sushi" src="https://github.com/user-attachments/assets/28d5f9d8-5f30-491d-9773-65e89a5ad8d0" />
 
 
+</details>
